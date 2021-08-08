@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="You Are At : "  >
+    <siteMapNode url="~/user/home.aspx" title="Home"  >
+      <siteMapNode url="~/user/profile.aspx" title="Profile"  />
+      <siteMapNode url="~/user/aboutus.aspx" title="About Us"  />
+      <siteMapNode url="~/user/cancelreq.aspx" title="Cancel Request"  />
+      <siteMapNode url="~/user/desire.aspx" title="Desire"  />
+      <siteMapNode url="~/user/feedback.aspx" title="Feedback"  />
+      <siteMapNode url="~/user/search.aspx" title="Visit"  />
+      <siteMapNode url="~/user/book.aspx" title="Booking Records"  />
+      <siteMapNode url="~/user/confirmation.aspx" title="Confirmation" />
+      <siteMapNode url="~/user/family.aspx" title="Family"  >
+        <siteMapNode url="~/user/fviewdetails.aspx" title="Family Package Details"  />
+      </siteMapNode>
+      <siteMapNode url="~/user/pilgrim.aspx" title="Pilgrim"  >
+        <siteMapNode url="~/user/viewdetails.aspx" title="Pilgrim Package Details"  />
+      </siteMapNode>
+      <siteMapNode url="~/user/special.aspx" title="Special"  >
+        <siteMapNode url="~/user/spviewdetails.aspx" title="Special Package Details"  />
+      </siteMapNode>  
+      </siteMapNode>
+    <siteMapNode url="~/admin/profile.aspx" title="Home"   >
+      <siteMapNode url="~/admin/details.aspx" title="Booking Details"   />
+      <siteMapNode url="~/admin/feedback.aspx" title="Feedback"   />
+      <siteMapNode url="~/admin/userdetails.aspx" title="User Details"   />
+      <siteMapNode url="~/admin/visit.aspx" title="Vist Details" />
+      <siteMapNode url="~/admin/desirereq.aspx" title="Desire Request" />
+      <siteMapNode url="~/admin/pack.aspx" title="Package" >
+        <siteMapNode url="~/admin/pil.aspx" title="Pilgrim Package Details" />  
+        <siteMapNode url="~/admin/spe.aspx" title="Special Package Details" /> 
+        <siteMapNode url="~/admin/fam.aspx" title="Family Package Details" />
+        <siteMapNode url="~/admin/addpack.aspx" title="Add New Package" />
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

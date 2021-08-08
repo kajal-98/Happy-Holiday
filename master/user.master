@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="user.master.cs" Inherits="user" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        history.forward();
+    
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body >
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="tab">
+            <tr><td colspan="2">
+                    <asp:Image ID="Image1" runat="server" Height="180px"  Width="1080px" ImageUrl="~/image/Untitled.png" />
+                </td></tr>
+            <tr><td  colspan="2">
+                    <asp:Button ID="home" runat="server" Text="Home" onclick="home_Click" 
+                        CssClass="but" Width="130px" />
+                    <asp:Button ID="Button1" runat="server" Text="Profile " CssClass="but" 
+                        onclick="Button1_Click" Width="130px" />
+                    <asp:Button ID="edutour" runat="server" Text="Family"  onclick="edutour_Click" 
+                        CssClass="but" Width="130px" />
+                    <asp:Button ID="grptour" runat="server" Text="Special"  onclick="grptour_Click" 
+                        CssClass="but" Width="130px"  />
+                    <asp:Button ID="hmtour" runat="server" Text="Pilgrim"  onclick="hmtour_Click" 
+                        CssClass="but" Width="130px"  />
+                    <asp:Button ID="destour" runat="server" Text="Desire"  onclick="destour_Click" 
+                        CssClass="but" Width="130px"  />
+                    <asp:Button ID="Button2" runat="server" CssClass="but" Text="Visit" 
+                        Width="130px" onclick="Button2_Click" />
+                    <asp:Button ID="logout" runat="server" Text="Logout"  onclick="logout_Click" 
+                        CssClass="but" Width="130px"  />
+                </td></tr>
+            <tr><td colspan="2" >
+                </td></tr>
+            <tr><td valign="top" width="500" align="left" >
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                </td>
+                <td align="left" valign="top" width="200" >
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+                    <asp:Timer ID="Timer1" runat="server" Interval="5000" ontick="Timer1_Tick">
+                    </asp:Timer>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:AdRotator ID="AdRotator2" runat="server" AdvertisementFile="~/adfile.xml" 
+                                BorderColor="#000099" BorderWidth="3px" Height="250px" Width="300px" />
+                <br />
+                            <asp:AdRotator ID="AdRotator3" runat="server" AdvertisementFile="~/adfile.xml" 
+                                BorderColor="#000099" BorderWidth="3px" Height="250px" Width="300px" />
+                            <br />
+                            <asp:AdRotator ID="AdRotator4" runat="server" AdvertisementFile="~/adfile.xml" 
+                                BorderColor="#000099" BorderWidth="3px" Height="250px" Width="300px" />
+                        </ContentTemplate>
+                        <Triggers>
+                         <asp:AsyncPostBackTrigger ControlID=Timer1 EventName=Tick/>
+                        </Triggers>
+                    </asp:UpdatePanel>
+                    <br />
+                </td> </tr>
+            <tr><td colspan="2" align="left" bgcolor="#3366FF" >
+                    <asp:TreeView ID="TreeView1" runat="server" ImageSet="Simple" NodeWrap="True" 
+                        ExpandDepth="0" NodeIndent="10" ShowLines="True" Width="525px" 
+                        LineImagesFolder="~/TreeLineImages">
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#DD5555" />
+                        <Nodes>
+                            <asp:TreeNode Text="SITEMAP" Value="SITEPATH">
+                                <asp:TreeNode Text="Home" 
+                                    Value="New Node" Expanded="False" NavigateUrl="~/user/home.aspx"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/profile.aspx" Text="Profile" Value="Profile">
+                                </asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/family.aspx" Text="Family Package" 
+                                    Value="Educational Tours"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/special.aspx" Text="Special Package" 
+                                    Value="Group Tours"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/pilgrim.aspx" Text="Pilgrim Tours" 
+                                    Value="Pilgrim Tours"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/desire.aspx" Text="Desire" 
+                                    Value="Desire"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/search.aspx" Text="Visit" Value="Visit">
+                                </asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/cancelreq.aspx" Text="Cancel Request" 
+                                    Value="Cancel Request"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/feedback.aspx" Text="Feedback" 
+                                    Value="Feedback"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/user/aboutus.aspx" Text="About Us" 
+                                    Value="About Us"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </Nodes>
+                        <NodeStyle Font-Names="Verdana" Font-Size="Small" ForeColor="White" 
+                            HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" />
+                        <ParentNodeStyle Font-Bold="False" />
+                        <RootNodeStyle BackColor="#3366FF" BorderColor="#0000CC" 
+                            Font-Bold="True" Font-Names="Arial" Font-Size="X-Large" ForeColor="White" 
+                            Width="500px" />
+                        <SelectedNodeStyle Font-Underline="True" ForeColor="#DD5555" 
+                            HorizontalPadding="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                    </td></tr>
+        </table></div></form></body></html>
